@@ -24,3 +24,11 @@ verMatriz(mensajeOculto);
 
 //convertir cada elemento en la matriz a su valor de tipo caracter
 //mostrar la matriz obtenida
+
+matriz.forEach(fila => {
+    fila.forEach(colElemento => {
+        colSumatoria += colElemento
+    });
+    filasSumatoria.push(colSumatoria)
+    colSumatoria = 0;
+});;

@@ -23,3 +23,14 @@ const matrizBinaria = [
 verMatriz(matrizBinaria);
 
 // Cambiar los 1 por 0 y viceversa, finalmente mostrar la matriz
+
+for (let i = 0; i < matrizBinaria.length; i++) {
+    for (let j = 0; j < matrizBinaria[i].length; j++){
+        if(matrizBinaria[i][j] == 0 ){
+            matrizBinaria[i][j] = 1;
+        } 
+        else {matrizBinaria[i][j] = 0 }
+    }
+}
+
+verMatriz(matrizBinaria);

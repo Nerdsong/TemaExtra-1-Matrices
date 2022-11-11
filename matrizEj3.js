@@ -18,17 +18,26 @@ const mensajeOculto = [
     [42,44,43,46,39],
     [87,111,114,108,100],
     [42,58,41,42,42]
-]
+];
 
 verMatriz(mensajeOculto);
 
 //convertir cada elemento en la matriz a su valor de tipo caracter
 //mostrar la matriz obtenida
 
-matriz.forEach(fila => {
-    fila.forEach(colElemento => {
-        colSumatoria += colElemento
-    });
-    filasSumatoria.push(colSumatoria)
-    colSumatoria = 0;
-});;
+let matrizResultante = [];
+let vectorFila =[]
+
+function cambiarALetras(matriz){
+    matriz.forEach(fila => {
+        fila.forEach(colElemento => {
+            //colElemento = String.fromCharCode(colElemento)
+            vectorFila.push(String.fromCharCode(colElemento))
+        });
+        matrizResultante.push(vectorFila)
+        vectorFila = [];
+    });;
+}
+
+cambiarALetras(mensajeOculto)
+verMatriz(matrizResultante)
